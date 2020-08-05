@@ -1,0 +1,87 @@
+/* CSS Document */
+.path-taxonomy .bog-block-content-readmore-wrapper, .path-taxonomy .bog-community-banner-wrapper-Stuttgart.hideme, .path-taxonomy .bog-community-banner-wrapper-Rhein.Main.hideme, .path-taxonomy .bog-community-banner-wrapper-Kaiserslautern.hideme, .path-taxonomy .bog-community-banner-wrapper-Bavaria.hideme, /*******************************************/ .path-bavaria .bog-block-content-readmore-wrapper, .path-kaiserslautern .bog-block-content-readmore-wrapper, .path-rhein-main .bog-block-content-readmore-wrapper, .path-stuttgart .bog-block-content-readmore-wrapper {
+    display: none;
+}
+.path-taxonomy .bog-block-content-readmore-wrapper.readmore, .path-bavaria .bog-block-content-readmore-wrapper.readmore, .path-kaiserslautern .bog-block-content-readmore-wrapper.readmore, .path-rhein-main .bog-block-content-readmore-wrapper.readmore, .path-stuttgart .bog-block-content-readmore-wrapper.readmore {
+    display: block;
+}
+/*********** Hamburger Position ************/
+.navbar-toggle.collapsed {
+    margin: -33px 0 90px 0;
+}
+.navbar-toggle {
+    margin: -33px 0 90px 0;
+}
+/*********** New Mobile Nav Component ************/
+/*************** Hamburger ***************/
+.hamburger-wrapper {
+    height: 35px;
+    width: auto;
+    position: absolute;
+    right: 20px;
+    top: 5px;
+}
+.hamburger-wrapper:hover {
+    cursor: pointer;
+}
+.hamburger-wrapper > label {
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin: 0px;
+    padding: 0px;
+}
+.custom-mobile-menus-hamburger {
+    display: block;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+.custom-mobile-menus-hamburger ul {
+    width: 25px;
+    height: auto;
+    padding: 0px;
+    margin: 0px;
+}
+.custom-mobile-menus-hamburger li {
+    height: 3px;
+    display: block;
+    background: #fff;
+    list-style: none;
+    margin: 5px 0 0px 0px;
+    border-radius: 4px;
+}
+/*************** Menu ***************/
+.custom-mobile-menu-toggle {
+    display: none;
+}
+.menu-custom-actions {
+    height: 0px;
+    overflow: hidden;
+}
+.custom-mobile-menu-toggle:checked ~ .custom-mobile-menu {
+    display: block;
+    position: relative;
+    z-index: 200;
+    transition: height 800ms ease-out;
+    height: 900px;
+    margin: 0px;
+}
+
+.custom-mobile-menu-toggle ~ .custom-mobile-menu {
+    transition: height 500ms ease-in;
+}
+
+.menu-custom-actions .search, .menu-custom-actions li {
+    transition: opacity 800ms ease-in;
+    opacity: 0;
+}
+.custom-mobile-menu-toggle:checked ~ .menu-custom-actions .search, .custom-mobile-menu-toggle:checked ~ .custom-mobile-menu li {
+    opacity: 1;
+    transition: opacity 500ms ease-out;
+}
+@media screen and (min-width: 1140px) {
+    .custom-mobile-menu, .hamburger-wrapper {
+        display: none;
+    }
+}
