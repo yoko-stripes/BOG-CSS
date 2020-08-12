@@ -353,10 +353,14 @@ h1.page-header:before {}
 .region.region-content > .layout.layout--onecol:last-of-type {
     width: 1120px;
 }
+
 .region.region-content > .layout.layout--onecol:last-of-type .layout__region.layout__region--content {
     height: unset;
+    width: 1120px;
 }
-.region.region-content > .layout.layout--onecol:last-of-type .layout__region.layout__region--content .views-element-container.form-group .view-bog-main-content-view div .views-infinite-scroll-content-wrapper {
+.region.region-content > .layout.layout--onecol:last-of-type .layout__region.layout__region--content .views-element-container.form-group .view-bog-main-content-view div .views-infinite-scroll-content-wrapper,
+.region.region-content > .layout.layout--onecol:last-of-type .view.view-bog-sub-menu-views div.view-content div.form-group,
+.region.region-content > .layout.layout--onecol:last-of-type .views-infinite-scroll-content-wrapper {
     width: 1120px;
     height: 100%;
     display: grid;
@@ -365,6 +369,11 @@ h1.page-header:before {}
     grid-column-gap: 26px;
     grid-row-gap: 30px;
 }
+
+.region.region-content > .layout.layout--onecol:last-of-type .views-infinite-scroll-content-wrapper {
+    margin-bottom: 30px;
+}
+
 .region.region-content > .layout.layout--onecol:last-of-type .layout__region.layout__region--content .views-element-container.form-group .view-bog-main-content-view div .views-infinite-scroll-content-wrapper:before {
     display: none;
     content: " ";
@@ -373,7 +382,8 @@ h1.page-header:before {}
     display: block;
     content: " ";
 }
-.layout__region.layout__region--content {
+.layout__region.layout__region--content,
+.region.region-content > .layout.layout--onecol:last-of-type .views-infinite-scroll-content-wrapper .views-row {
     width: 354px;
     min-height: 600px;
     height: auto;
@@ -658,6 +668,7 @@ ol.breadcrumb {
 }
 .path-node .layout.layout--onecol:nth-of-type(7) {
     grid-area: morebest-title;
+    height: 20px;
 }
 .path-node .layout.layout--onecol:nth-of-type(8) {
     grid-area: morebest-cont;
@@ -1898,7 +1909,9 @@ body.path-search div.view-id-search_bog_search_view div.view-empty h3 {
     .region.region-content > .layout.layout--onecol:last-of-type .layout__region.layout__region--content {
         height: 100%;
     }
-    .region.region-content > .layout.layout--onecol:last-of-type .layout__region.layout__region--content .views-element-container.form-group .view-bog-main-content-view div .views-infinite-scroll-content-wrapper {
+    .region.region-content > .layout.layout--onecol:last-of-type .layout__region.layout__region--content .views-element-container.form-group .view-bog-main-content-view div .views-infinite-scroll-content-wrapper,
+    .region.region-content > .layout.layout--onecol:last-of-type .view.view-bog-sub-menu-views div.view-content div.form-group,
+    .region.region-content > .layout.layout--onecol:last-of-type .views-infinite-scroll-content-wrapper{
         width: 100%;
         height: 100%;
         display: grid;
@@ -1907,8 +1920,9 @@ body.path-search div.view-id-search_bog_search_view div.view-empty h3 {
         grid-column-gap: 0px;
         grid-row-gap: 17px;
     }
-    .layout__region.layout__region--content {
-        width: 335px;
+    .layout__region.layout__region--content,
+    .region.region-content > .layout.layout--onecol:last-of-type .views-infinite-scroll-content-wrapper .views-row {
+        width: 335px !important;
         min-height: 575px;
         height: auto;
         margin: 0px;
@@ -3032,7 +3046,9 @@ body.path-search div.view-id-search_bog_search_view div.view-empty h3 {
         top: -630px;
         right: -374px;
     }
-    .region.region-content > .layout.layout--onecol:last-of-type .layout__region.layout__region--content .views-element-container.form-group .view-bog-main-content-view div .views-infinite-scroll-content-wrapper {
+    .region.region-content > .layout.layout--onecol:last-of-type .layout__region.layout__region--content .views-element-container.form-group .view-bog-main-content-view div .views-infinite-scroll-content-wrapper,
+    .region.region-content > .layout.layout--onecol:last-of-type .view.view-bog-sub-menu-views div.view-content div.form-group,
+    .region.region-content > .layout.layout--onecol:last-of-type .views-infinite-scroll-content-wrapper{
         position: relative;
         width: 100%;
         height: 100%;
@@ -3045,8 +3061,9 @@ body.path-search div.view-id-search_bog_search_view div.view-empty h3 {
     .region.region-content > .layout.layout--onecol:last-of-type .layout__region.layout__region--content .views-element-container.form-group .view-bog-main-content-view div .views-infinite-scroll-content-wrapper .views-row:last-of-type {
         margin-bottom: 30px;
     }
-    .layout__region.layout__region--content {
-        width: 354px;
+    .layout__region.layout__region--content,
+    .region.region-content > .layout.layout--onecol:last-of-type .views-infinite-scroll-content-wrapper .views-row {
+        width: 354px !important;
         min-height: 600px;
         height: auto;
         margin: 0px;
@@ -3794,7 +3811,9 @@ body.path-search div.view-id-search_bog_search_view div.view-empty h3 {
     .region.region-content > .layout.layout--onecol:last-of-type {
         width: 100%;
     }
-    .region.region-content > .layout.layout--onecol:last-of-type .layout__region.layout__region--content .views-element-container.form-group .view-bog-main-content-view div .views-infinite-scroll-content-wrapper {
+    .region.region-content > .layout.layout--onecol:last-of-type .layout__region.layout__region--content .views-element-container.form-group .view-bog-main-content-view div .views-infinite-scroll-content-wrapper,
+    .region.region-content > .layout.layout--onecol:last-of-type .view.view-bog-sub-menu-views div.view-content div.form-group,
+    .region.region-content > .layout.layout--onecol:last-of-type .views-infinite-scroll-content-wrapper {
         width: 100%;
         height: 100%;
         display: grid;
