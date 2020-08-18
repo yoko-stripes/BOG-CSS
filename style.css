@@ -1940,11 +1940,11 @@ body.path-search div.view-id-search_bog_search_view div.view-empty h3 {
     }
     /****** See more winners button *******/
     ul.js-pager__items.pager {
-        position: absolute;
+        position: relative;
         width: 100%;
         left: 0px;
         right: 0px;
-        margin: 0px auto;
+        margin: 0px auto -30px auto;
         text-align: center;
     }
     ul.js-pager__items.pager .pager__item a {

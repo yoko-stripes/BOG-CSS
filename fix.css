@@ -1,5 +1,5 @@
 /* CSS Document */
-.path-taxonomy .bog-block-content-readmore-wrapper, .path-taxonomy .bog-community-banner-wrapper-Stuttgart.hideme, .path-taxonomy .bog-community-banner-wrapper-Rhein.Main.hideme, .path-taxonomy .bog-community-banner-wrapper-Kaiserslautern.hideme, .path-taxonomy .bog-community-banner-wrapper-Bavaria.hideme, /*******************************************/ .path-bavaria .bog-block-content-readmore-wrapper, .path-kaiserslautern .bog-block-content-readmore-wrapper, .path-rhein-main .bog-block-content-readmore-wrapper, .path-stuttgart .bog-block-content-readmore-wrapper {
+.path-taxonomy .bog-block-content-readmore-wrapper, .path-taxonomy .bog-community-banner-wrapper-Stuttgart.hideme, .path-taxonomy .bog-community-banner-wrapper-Rhein.Main.hideme, .path-taxonomy .bog-community-banner-wrapper-Kaiserslautern.hideme, .path-taxonomy .bog-community-banner-wrapper-Bavaria.hideme, /*******************************************/ .path-bavaria .bog-block-content-readmore-wrapper, .path-kaiserslautern .bog-block-content-readmore-wrapper, .path-rhein-main .bog-block-content-readmore-wrapper, .path-stuttgart .bog-block-content-readmore-wrapper, .search {
     display: none;
 }
 .path-taxonomy .bog-block-content-readmore-wrapper.readmore, .path-bavaria .bog-block-content-readmore-wrapper.readmore, .path-kaiserslautern .bog-block-content-readmore-wrapper.readmore, .path-rhein-main .bog-block-content-readmore-wrapper.readmore, .path-stuttgart .bog-block-content-readmore-wrapper.readmore {
@@ -51,6 +51,11 @@
     margin: 5px 0 0px 0px;
     border-radius: 4px;
 }
+@media screen and (min-width: 1140px) {
+    .custom-mobile-menu, .hamburger-wrapper {
+        display: none;
+    }
+}
 /*************** Menu ***************/
 .custom-mobile-menu-toggle {
     display: none;
@@ -64,24 +69,77 @@
     position: relative;
     z-index: 200;
     transition: height 800ms ease-out;
-    height: 900px;
+    height: 860px;
     margin: 0px;
 }
-
 .custom-mobile-menu-toggle ~ .custom-mobile-menu {
     transition: height 500ms ease-in;
 }
 
-.menu-custom-actions .search, .menu-custom-actions li {
+.menu-custom-actions .search, 
+.menu-custom-actions li {
     transition: opacity 800ms ease-in;
     opacity: 0;
 }
-.custom-mobile-menu-toggle:checked ~ .menu-custom-actions .search, .custom-mobile-menu-toggle:checked ~ .custom-mobile-menu li {
+.custom-mobile-menu-toggle:checked ~ .menu-custom-actions .search, 
+.custom-mobile-menu-toggle:checked ~ .custom-mobile-menu li {
     opacity: 1;
     transition: opacity 500ms ease-out;
 }
+/***************  Control Switch  ***************/
+.bog-block-content-photo-wrapper.notpaid-with-nolin-Off,
+.bog-block-content-readmore-wrapper.readmore.readmorepaid-On,
+.bog-block-content-photo-wrapper.paid-with-lin-On{
+	display: block;
+}
+.bog-block-content-readmore-wrapper.readmore.readmorepaid-Off,
+.bog-block-content-photo-wrapper.notpaid-with-nolin-On,
+.bog-block-content-photo-wrapper.paid-with-lin-Off{
+	display: none;
+}
+/***************  Ani Border  ***************/
+.bog-block-view-content-wrapper.highlight-On .bog-community-banner-wrapper-Rhein.Main::before,
+.bog-block-view-content-wrapper.highlight-On .bog-community-banner-wrapper-Stuttgart::before,
+.bog-block-view-content-wrapper.highlight-On .bog-community-banner-wrapper-Kaiserslautern::before,
+.bog-block-view-content-wrapper.highlight-On .bog-community-banner-wrapper-Bavaria::before {
+    content: "Premium ";
+}
+.bog-block-view-content-wrapper.highlight-On .bog-community-banner-wrapper-Rhein.Main,
+.bog-block-view-content-wrapper.highlight-On .bog-community-banner-wrapper-Stuttgart,
+.bog-block-view-content-wrapper.highlight-On .bog-community-banner-wrapper-Kaiserslautern,
+.bog-block-view-content-wrapper.highlight-On .bog-community-banner-wrapper-Bavaria{
+   position:relative;
+   top: 0px;
+   left: 0px;
+   height: 37px;
+   width: 100%;
+   background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+   background-size: auto;
+   z-index: -0;
+   animation: animatedgradient 50s ease alternate infinite;
+   background-size: 300% 300%;
+   margin-bottom: 0px;
+}
+#paid-with-lin-On {
+    display: block;
+    margin-bottom: -36px;
+}
+@keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
 @media screen and (min-width: 1140px) {
-    .custom-mobile-menu, .hamburger-wrapper {
+	.custom-mobile-menu .search,
+	.custom-mobile-menu li,
+    .custom-mobile-menu, 
+	.hamburger-wrapper {
         display: none;
     }
 }
